@@ -4,214 +4,328 @@
 <head>
     <meta charset="UTF-8">
     <title>Контакты — Soma</title>
-
     <link rel="stylesheet" href="src/assets/styles/style.css">
 </head>
 
 <body>
-<header class="header">
-    <a class="header__logo" href="index.html">
-        <img
-            class="header__logo-img"
-            src="static/img/logo.png"
-            alt="Логотип Soma"
-        >
-    </a>
 
-    <nav class="main-menu">
-        <ul class="main-menu__list">
-            <li class="main-menu__item">
-                <a class="main-menu__link" href="index.html">
-                    Главная
-                </a>
-            </li>
+    <header class="header">
 
-            <li class="main-menu__item">
-                <a class="main-menu__link" href="contacts.html">
-                    Контакты
-                </a>
-            </li>
-        </ul>
-    </nav>
-</header>
+        <a class="header__logo" href="index.html">
 
-
-    <main>
-
-        <h2 class="heading-2">
-            Contact Us
-        </h2>
-
-        <p class="paragraph">
-            Мы рядом
-        </p>
-
-
-        <img
-            src="static/img/contact.jpg"
-            alt="QR-code"
-            width="350"
-        >
-
-
-        <h4 class="heading-4">
-            Address
-        </h4>
-
-        <p class="paragraph">
-            Тюмень
-        </p>
-
-
-        <h4 class="heading-4">
-            Phone
-        </h4>
-
-        <ul>
-            <li>
-                <a href="tel:+79220021440">
-                    +79220021440
-                </a>
-            </li>
-
-            <li>
-                <a href="tel:+792261176767">
-                    +792261176767
-                </a>
-            </li>
-        </ul>
-
-
-        <h4 class="heading-4">
-            Online service
-        </h4>
-
-        <ul>
-
-            <li>
-                <a
-                    href="https://massage-soma.tilda.ws/"
-                    target="_blank"
-                >
-                    massage-soma.tilda.ws
-                </a>
-            </li>
-
-            <li>
-                <a href="mailto:info@soma.ru">
-                    info@soma.ru
-                </a>
-            </li>
-
-        </ul>
-
-
-        <h4 class="heading-4">
-            Send us message
-        </h4>
-
-
-        <form
-            class="contact-form"
-            action="#"
-            method="post"
-        >
-
-            <div class="form-group">
-
-                <label for="fullname">
-                    Full Name
-                </label>
-
-                <input
-                    class="form-control"
-                    type="text"
-                    id="fullname"
-                    name="fullname"
-                >
-
-            </div>
-
-
-            <div class="form-group">
-
-                <label for="email">
-                    Email
-                </label>
-
-                <input
-                    class="form-control"
-                    type="email"
-                    id="email"
-                    name="email"
-                >
-
-            </div>
-
-
-            <div class="form-group">
-
-                <label for="message">
-                    Message
-                </label>
-
-                <textarea
-                    class="form-control"
-                    id="message"
-                    name="message"
-                    rows="5"
-                ></textarea>
-
-            </div>
-
-
-            <button
-                class="submit-button"
-                type="submit"
+            <img
+                class="header__logo-img"
+                src="static/img/logo.png"
+                alt="Логотип Soma"
             >
-                Submit
-            </button>
 
-        </form>
+        </a>
+
+        <nav class="main-menu">
+
+            <ul class="main-menu__list">
+
+                <li class="main-menu__item">
+
+                    <a class="main-menu__link" href="index.html">
+                        Главная
+                    </a>
+
+                </li>
+
+                <li class="main-menu__item">
+
+                    <a class="main-menu__link" href="contacts.html">
+                        Контакты
+                    </a>
+
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+        <hr>
+
+    <main class="main">
+
+        <section class="contacts-intro">
+
+            <article class="contacts-intro__content">
+
+                <h2 class="heading-2">Contact Us</h2>
+
+                <p class="paragraph"> Мы рядом</p>
+
+            </article>
+
+            <div class="contacts-intro__image">
+
+                <img
+                    src="static/img/contact.jpg"
+                    alt="QR-code"
+                    width="450"
+                >
+
+            </div>
+
+        </section>
+
+        <hr>
+
+        <section class="contact-information">
+
+            <article class="contact-information__address">
+
+                <h4 class="heading-4">
+                    Address
+                </h4>
+
+                <p class="paragraph">
+                    Тюмень
+                </p>
+
+            </article>
+
+
+            <article class="contact-information__phone">
+
+                <h4 class="heading-4">
+                    Phone
+                </h4>
+
+                <ul class="phone-list">
+
+                    <li class="phone-list__item">
+
+                        <a href="tel:+79220021440">
+                            +79220021440
+                        </a>
+
+                    </li>
+
+                    <li class="phone-list__item">
+
+                        <a href="tel:+792261176767">
+                            +792261176767
+                        </a>
+
+                    </li>
+
+                </ul>
+
+            </article>
+
+
+            <article class="contact-information__online">
+
+                <h4 class="heading-4">
+                    Online service
+                </h4>
+
+                <ul class="online-service-list">
+
+                    <li class="online-service-list__item">
+
+                        <a
+                            href="https://massage-soma.tilda.ws/"
+                            target="_blank"
+                        >
+                            massage-soma.tilda.ws
+                        </a>
+
+                    </li>
+
+                    <li class="online-service-list__item">
+
+                        <a href="mailto:info@soma.ru">
+                            info@soma.ru
+                        </a>
+
+                    </li>
+
+                </ul>
+
+            </article>
+
+        </section>
+
+        <hr>
+
+        <section class="feedback-section">
+
+            <article class="feedback-section__description">
+
+                <h3 class="heading-3">
+                    Send us message
+                </h3>
+
+                <p class="paragraph">
+                    Оставьте свои контактные данные,
+                    и мы свяжемся с вами.
+                </p>
+
+            </article>
+
+
+            <article class="feedback-section__form">
+
+                <form
+                    class="contact-form"
+                    action="#"
+                    method="post"
+                >
+
+                    <div class="form-group">
+
+                        <label for="fullname">
+                            Full Name
+                        </label>
+
+                        <input
+                            class="form-control"
+                            type="text"
+                            id="fullname"
+                            name="fullname"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="email">
+                            Email
+                        </label>
+
+                        <input
+                            class="form-control"
+                            type="email"
+                            id="email"
+                            name="email"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="message">
+                            Message
+                        </label>
+
+                        <textarea
+                            class="form-control"
+                            id="message"
+                            name="message"
+                            rows="5"
+                        ></textarea>
+
+                    </div>
+
+
+                    <button
+                        class="submit-button"
+                        type="submit"
+                    >
+                        Submit
+                    </button>
+
+                </form>
+
+            </article>
+
+        </section>
+
+        <hr>
+
+        <section class="studio-section">
+
+            <article class="studio-section__content">
+
+                <h3 class="heading-3">
+                    Студия Soma
+                </h3>
+
+                <p class="paragraph">
+                    Пространство для отдыха,
+                    красоты и заботы о себе.
+                </p>
+
+            </article>
+
+            <div class="studio-section__image">
+
+                <img
+                    src="static/img/inside.jpg"
+                    alt="Интерьер студии Soma"
+                    width="450"
+                >
+
+                <img
+                    src="static/img/inside2.jpg"
+                    alt="Интерьер студии Soma"
+                    width="450"
+                >
+
+            </div>
+
+        </section>
 
     </main>
 
 
-    <footer>
+    <hr>
 
-        <h3 class="heading-3">
-            Наши контакты
-        </h3>
+    <footer class="footer">
 
-        <p class="paragraph">
-            Свяжитесь с нами удобным для вас способом.
-        </p>
+        <section class="footer__contacts">
+
+            <h3 class="heading-3">
+                Наши контакты
+            </h3>
+
+            <p class="paragraph">
+                Свяжитесь с нами удобным для вас способом.
+            </p>
+
+            <ul class="footer__contact-list">
+
+                <li>
+                    Салон красоты прямо у вашего дома
+                </li>
+
+                <li>
+
+                    <a href="tel:+79220021440">
+                        +79220021440
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="mailto:info@soma.ru">
+                        info@soma.ru
+                    </a>
+
+                </li>
+
+            </ul>
+
+        </section>
 
         <hr>
 
-        <ul>
+        <section class="footer__copyright">
 
-            <li>
-                Салон красоты прямо у вашего дома
-            </li>
+            <p class="paragraph">
+                Все права защищены
+            </p>
 
-            <li>
-                <a href="tel:+79220021440">
-                    +79220021440
-                </a>
-            </li>
-
-            <li>
-                <a href="mailto:info@soma.ru">
-                    info@soma.ru
-                </a>
-            </li>
-
-        </ul>
-
-        <p class="paragraph">
-            Все права защищены
-        </p>
+        </section>
 
     </footer>
 

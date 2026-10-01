@@ -9,43 +9,51 @@
 
 <body>
 
-    <header class="header">
+<header class="header">
 
-        <a class="header__logo" href="index.html">
+    <a class="header__logo" href="index.html">
+        <img
+            class="header__logo-img"
+            src="static/img/logo.png"
+            alt="Логотип Soma"
+        >
+    </a>
 
-            <img
-                class="header__logo-img"
-                src="static/img/logo.png"
-                alt="Логотип Soma"
-            >
+    <nav class="main-menu">
+        <ul class="main-menu__list">
 
+            <li class="main-menu__item">
+                <a class="main-menu__link" href="index.html">
+                    Главная
+                </a>
+            </li>
+
+            <li class="main-menu__item">
+                <a class="main-menu__link" href="contacts.html">
+                    Контакты
+                </a>
+            </li>
+
+        </ul>
+    </nav>
+
+    <div class="header__contacts">
+
+        <a class="header__contact" href="tel:+79220021440">
+            +7 922 002-14-40
         </a>
 
-        <nav class="main-menu">
+        <a class="header__contact" href="tel:+792261176767">
+            +7 922 611-76-767
+        </a>
 
-            <ul class="main-menu__list">
+        <a class="header__contact" href="mailto:info@soma.ru">
+            info@soma.ru
+        </a>
 
-                <li class="main-menu__item">
+    </div>
 
-                    <a class="main-menu__link" href="index.html">
-                        Главная
-                    </a>
-
-                </li>
-
-                <li class="main-menu__item">
-
-                    <a class="main-menu__link" href="contacts.html">
-                        Контакты
-                    </a>
-
-                </li>
-
-            </ul>
-
-        </nav>
-
-    </header>
+</header>
 
         <hr>
 
@@ -279,33 +287,46 @@
 
     <hr>
 
-    <footer class="footer">
+<footer class="footer">
 
-        <section class="footer__contacts">
+    <div class="footer__inner">
 
-            <h3 class="heading-3">
-                Наши контакты
+
+        <section class="footer__about">
+
+            <h3 class="footer__title">
+                Soma
             </h3>
 
             <p class="paragraph">
-                Свяжитесь с нами удобным для вас способом.
+                Студия красоты и массажа.
+                Забота о вашем теле и хорошем самочувствии.
             </p>
+
+        </section>
+
+
+        <section class="footer__contacts">
+
+            <h3 class="footer__title">
+                Наши контакты
+            </h3>
 
             <ul class="footer__contact-list">
 
-                <li>
+                <li class="footer__contact-item">
                     Салон красоты прямо у вашего дома
                 </li>
 
-                <li>
+                <li class="footer__contact-item">
 
                     <a href="tel:+79220021440">
-                        +79220021440
+                        +7 922 002-14-40
                     </a>
 
                 </li>
 
-                <li>
+                <li class="footer__contact-item">
 
                     <a href="mailto:info@soma.ru">
                         info@soma.ru
@@ -317,17 +338,42 @@
 
         </section>
 
-        <hr>
 
-        <section class="footer__copyright">
+        <nav class="footer__navigation">
 
-            <p class="paragraph">
-                Все права защищены
-            </p>
+            <h3 class="footer__title">
+                Навигация
+            </h3>
 
-        </section>
+            <ul class="footer__menu">
 
-    </footer>
+                <li>
+                    <a href="index.html">
+                        Главная
+                    </a>
+                </li>
 
+                <li>
+                    <a href="contacts.html">
+                        Контакты
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </div>
+
+
+    <div class="footer__bottom">
+
+        <p class="paragraph footer__copyright">
+            Все права защищены
+        </p>
+
+    </div>
+
+</footer>
 </body>
 </html>

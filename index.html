@@ -1,255 +1,491 @@
 <!DOCTYPE html>
-<html lang="ru">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Главная — Soma</title>
-
-    <link rel="stylesheet" href="src/assets/styles/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT Website</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <header class="site-header">
 
-    <header class="header">
+        <div class="header-container">
 
-        <a class="header__logo" href="index.html">
-            <img
-                class="header__logo-img"
-                src="static/img/logo.png"
-                alt="Логотип Soma"
-            >
-        </a>
+            <a class="logo" href="#">IT WEBSITE</a>
 
-        <nav class="main-menu">
+            <nav class="main-navigation">
+                <ul>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#media">Media</a></li>
+                    <li><a href="#cases">Cases</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#contacts">Contacts</a></li>
+                </ul>
+            </nav>
 
-            <ul class="main-menu__list">
+            <div class="header-contacts">
+                <a href="tel:+71111111111">+7 (111) 111 11 11</a>
+                <a href="tel:+71111111111">+7 (111) 111 11 11</a>
+                <a href="mailto:itcompany@gmail.com">itcompany@gmail.com</a>
+            </div>
 
-                <li class="main-menu__item">
-                    <a class="main-menu__link" href="index.html">
-                        Главная
-                    </a>
-                </li>
-
-                <li class="main-menu__item">
-                    <a class="main-menu__link" href="contacts.html">
-                        Контакты
-                    </a>
-                </li>
-
-            </ul>
-
-        </nav>
+        </div>
 
     </header>
 
-        <hr>
-        
-    <main class="main">
-
+    <main>
         <section class="hero-section">
 
-            <article class="hero-section__content">
+            <div class="hero-content">
 
-                <h1 class="heading-1">
-                    Soma — студия красоты
-                </h1>
+                <article class="hero-description">
 
-                <p class="paragraph">
-                    Подчеркнем вашу естественную красоту
-                    и уберем недостатки.
-                </p>
+                    <h1>
+                        Development of mobile applications and web services
+                        of any complexity
+                    </h1>
 
-            </article>
+                    <p>
+                        We create mobile applications for iOS, Android that transfer
+                        your business to mobile applications of your customers' devices
+                    </p>
 
-            <div class="hero-section__image">
+                </article>
 
-                <img
-                    src="static/img/график.jpg"
-                    alt="График работы  массажного салона"
-                    width="550"
-                >
+                <form class="hero-form" action="#" method="post">
 
+                    <h2>
+                        Leave your contacts and we will call you back within 30 minutes
+                    </h2>
+
+                    <label for="hero-phone">Phone number</label>
+                    <input id="hero-phone" type="tel" name="phone">
+
+                    <label for="hero-name">Full name</label>
+                    <input id="hero-name" type="text" name="name">
+
+                    <button type="submit">Get consultation</button>
+
+                </form>
+
+            </div>
+
+            <div class="hero-image">
+                <img src="" alt="Mobile applications">
             </div>
 
         </section>
 
         <hr>
 
-        <section class="trial-section">
+        <section class="development-section" id="services">
 
-            <article class="trial-section__content">
+            <article class="development-description">
 
-                <h3 class="heading-3">
-                    Пробный формат
-                </h3>
+                <h2>Full development cycle</h2>
 
-                <h4 class="heading-4">
-                    Серьёзный результат для каждого гостя
-                </h4>
+                <p>We use proven technologies</p>
 
-                <p class="paragraph">
-                    Приглашаем попробовать массаж бесплатно —
-                    один сеанс вас впечатлит.
+                <h3>Web</h3>
+
+                <p>
+                    PHP / Javascript / Node.JS / Web Socket / Socket.io / Vue.js /
+                    Nuxt / MySQL / Laravel / GO lang / django / Python
+                </p>
+
+                <h3>Mobile</h3>
+
+                <p>
+                    Swift / Kotlin / Alamofire / Firebase / CoreData / Room / Realm /
+                    Coroutine / RxJava / RxSwift / Unit Test / Navigation
                 </p>
 
             </article>
 
-            <div class="trial-section__image">
+            <aside class="services-list">
 
-                <img
-                    src="static/img/pricelist.png"
-                    alt="Прайслист массажного салона"
-                    width="550"
-                >
-            </div>
+                <h2>Services</h2>
 
-        </section>
-
-        <hr>
-
-        <section class="services-section">
-
-            <article class="services-section__description">
-
-                <h3 class="heading-3">
-                    Услуги
-                </h3>
-
-                <p class="paragraph">
-                    В нашей студии можно подобрать процедуры
-                    для красоты, здоровья и хорошего самочувствия.
-                </p>
-
-            </article>
-
-            <article class="services-section__list">
-
-                <h4 class="heading-4">
-                    Наши направления
-                </h4>
-
-                <ul class="services-list">
-
-                    <li class="services-list__item">
-                        Горячий вакуум
-                    </li>
-
-                    <li class="services-list__item">
-                        Вибромассаж
-                    </li>
-
-                    <li class="services-list__item">
-                        МС процердура
-                    </li>
-
-                    <li class="services-list__item">
-                        Разные виды комбо и курсов для подтяжки вашего тела
-                    </li>
-
+                <ul>
+                    <li>iOS development</li>
+                    <li>Android development</li>
+                    <li>Web development</li>
+                    <li>UI/UX design</li>
+                    <li>Testing</li>
+                    <li>Launch</li>
+                    <li>IT consulting</li>
                 </ul>
 
-            </article>
+            </aside>
 
         </section>
-        <hr>
-
-        <section class="gallery">
-
-        <h3>Галерея</h3>
-
-            <img src="static/img/photo1.png" alt="Фото 1" width="250">
-            <img src="static/img/photo2.png" alt="Фото 2" width="250">
-            <img src="static/img/photo3.png" alt="Фото 3" width="250">
-         </section>
 
         <hr>
 
-        <section class="contact-preview">
+        <section class="industries-section" id="cases">
 
-            <article class="contact-preview__content">
+            <h2>
+                Developed more than 100<br>
+                projects in 15 industries
+            </h2>
 
-                <h3 class="heading-3">
-                    Хотите записаться?
-                </h3>
+            <ul class="industries-list">
+                <li>Social media</li>
+                <li>Education</li>
+                <li>AR technology</li>
+                <li>Fitness and sport</li>
+                <li>Auto, transport</li>
+                <li>TV series</li>
+                <li>Bank</li>
+                <li>Medicine, health</li>
+                <li>Startups</li>
+                <li>Construction</li>
+                <li>Restaurants, food delivery</li>
+                <li>Religion</li>
+                <li>Game projects</li>
+                <li>Marketplaces</li>
+                <li>Online courses</li>
+            </ul>
 
-                <p class="paragraph">
-                    Свяжитесь с нами удобным способом
-                    или перейдите на страницу контактов.
+        </section>
+
+        <hr>
+
+        <section class="projects-section">
+
+            <div class="projects-intro">
+
+                <h2>Projects we are proud of</h2>
+
+                <p>
+                    Our software development company is truly proud of the wonderful
+                    clients we have worked with. We enjoy a long-term partnership
                 </p>
 
-                <div class="contact-preview__image">
+            </div>
 
-                    <img src="static/img/contact.jpg" width="450" >
+            <nav class="projects-navigation">
+                <ul>
+                    <li><a href="#i-teka">I-teka</a></li>
+                    <li><a href="#dauletteen">Dauletteen</a></li>
+                    <li><a href="#guru-bosch">Guru Bosch</a></li>
+                    <li><a href="#santo">Santo</a></li>
+                    <li><a href="#home-credit-bank">Home Credit Bank</a></li>
+                    <li><a href="#bi-partners">BI Partners</a></li>
+                    <li><a href="#europharma">Europharma</a></li>
+                </ul>
+
+                <a href="#all-projects">View 100 more projects</a>
+            </nav>
+
+            <article class="project-card" id="i-teka">
+
+                <div class="project-description">
+
+                    <h3>I-teka</h3>
+
+                    <p>
+                        The application is designed to search for drugs by availability
+                        in pharmacies in cities. During quarantine, the application
+                        helped many people, which gives more value.
+                    </p>
+
+                    <p>
+                        Business analysis / iOS / Android / QA / UI/UX Design
+                    </p>
+
+                    <ul>
+                        <li>Kazakhstan</li>
+                        <li>Medicine</li>
+                    </ul>
+
+                    <dl>
+                        <div>
+                            <dt>400%</dt>
+                            <dd>User Growth</dd>
+                        </div>
+
+                        <div>
+                            <dt>+ 200 000</dt>
+                            <dd>Active Users</dd>
+                        </div>
+                    </dl>
+
+                    <ul class="app-links">
+                        <li>App Store</li>
+                        <li>Google Play</li>
+                    </ul>
 
                 </div>
 
-                <ul class="contact-preview__list">
-
-                    <li>
-                        <a href="tel:+79220021440">
-                            +7 922 002-14-40
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="mailto:info@soma.ru">
-                            info@soma.ru
-                        </a>
-                    </li>
-
-                </ul>
+                <div class="project-image">
+                    <img src="" alt="I-teka application">
+                </div>
 
             </article>
+
+        </section>
+
+        <hr>
+
+        <section class="discussion-section">
+
+            <article class="discussion-description">
+
+                <h2>Let's discuss<br>Your project</h2>
+
+                <p>
+                    Let's figure out how to create an effective application,
+                    its cost and terms of its development
+                </p>
+
+            </article>
+
+            <form class="discussion-form" action="#" method="post">
+
+                <label for="discussion-phone">Best phone number</label>
+                <input id="discussion-phone" type="tel" name="phone">
+
+                <label for="discussion-name">Full name</label>
+                <input id="discussion-name" type="text" name="name">
+
+                <button type="submit">Discuss the project</button>
+
+            </form>
+
+        </section>
+
+        <hr>
+
+        <section class="stages-section" id="media">
+
+            <h2>Application Development Stages</h2>
+
+            <div class="stages-list">
+
+                <article class="stage-item">
+                    <h3>Analysis</h3>
+                    <p>
+                        We write technical specifications for development,
+                        taking into account the business processes and technologies
+                        of the customer and the needs of users.
+                    </p>
+                </article>
+
+                <article class="stage-item">
+                    <h3>Design</h3>
+                    <p>
+                        We adapt the customer's corporate identity to the platform
+                        guidelines. We draw convenient and understandable interfaces.
+                    </p>
+                </article>
+
+                <article class="stage-item">
+                    <h3>Development</h3>
+                    <p>
+                        We create an extensible architecture, write clean and stable
+                        code. We integrate with customer technologies.
+                    </p>
+                </article>
+
+                <article class="stage-item">
+                    <h3>Testing</h3>
+                    <p>
+                        We carry out functional testing and do bug fixes.
+                        We adapt the application to different phone resolutions.
+                    </p>
+                </article>
+
+                <article class="stage-item">
+                    <h3>Launching</h3>
+                    <p>
+                        We design the application page and publish it in the
+                        App Store and Google Play stores.
+                    </p>
+                </article>
+
+                <article class="stage-item">
+                    <h3>Support</h3>
+                    <p>
+                        We monitor the stability of the application, update it
+                        for new devices and versions of iOS and Android.
+                    </p>
+                </article>
+
+            </div>
+
+        </section>
+
+        <hr>
+
+        <section class="team-section">
+
+            <article class="team-description">
+
+                <h2>Our team</h2>
+
+                <p>
+                    Thousand is a full-cycle digital production company with its own
+                    product analytics, design, web and mobile development.
+                </p>
+
+                <dl class="team-statistics">
+
+                    <div>
+                        <dt>28</dt>
+                        <dd>team members</dd>
+                    </div>
+
+                    <div>
+                        <dt>+100</dt>
+                        <dd>projects</dd>
+                    </div>
+
+                    <div>
+                        <dt>7 years</dt>
+                        <dd>in IT sphere</dd>
+                    </div>
+
+                </dl>
+
+                <p>
+                    All the necessary specialists - from a designer to a tester -
+                    are on our staff. We hire the best specialists in the market.
+                    It's expensive but worth it
+                </p>
+
+            </article>
+
+            <div class="team-image">
+                <img src="" alt="Our team">
+            </div>
+
+        </section>
+
+        <hr>
+
+        <section class="book-section">
+
+            <article class="book-description">
+
+                <h2>
+                    Get the book for free by leaving<br>
+                    your contacts
+                </h2>
+
+                <form class="book-form" action="#" method="post">
+
+                    <label for="book-phone">Phone number</label>
+                    <input id="book-phone" type="tel" name="phone">
+
+                    <label for="book-name">Your full name</label>
+                    <input id="book-name" type="text" name="name">
+
+                    <label for="book-email">email</label>
+                    <input id="book-email" type="email" name="email">
+
+                    <button type="submit">Send me e-book to my mail</button>
+
+                </form>
+
+            </article>
+
+            <div class="book-image">
+                <img src="" alt="Book">
+            </div>
+
+        </section>
+
+        <hr>
+
+        <section class="faq-section" id="faq">
+
+            <h2>FAQ</h2>
+
+            <div class="faq-content">
+
+                <div class="faq-questions">
+
+                    <article class="faq-question">
+                        <h3>What is the cost of a mobile application?</h3>
+                        <button type="button">+</button>
+                    </article>
+
+                    <article class="faq-question">
+                        <h3>Do you provide a guarantee for the mobile application?</h3>
+                        <button type="button">+</button>
+                    </article>
+
+                </div>
+
+                <article class="faq-answer">
+
+                    <h3>How long will development take?</h3>
+
+                    <p>
+                        Development terms directly depend on the requirements for
+                        the mobile application, the characteristics of the company,
+                        as well as the wishes of the customer.
+                    </p>
+
+                    <p>
+                        Average development time from start to finished application:
+                        Medium projects up to 3 months. Large projects about 4-6 months.
+                    </p>
+
+                    <p>
+                        To get a more accurate estimate of the project completion time,
+                        it is necessary to determine the main task of the application,
+                        think over its logic and functionality.
+                    </p>
+
+                </article>
+
+                <article class="faq-question">
+                    <h3>I will not tell my idea, do you guarantee confidentiality?</h3>
+                    <button type="button">+</button>
+                </article>
+
+            </div>
 
         </section>
 
     </main>
 
-    <hr>
+    <footer class="site-footer" id="contacts">
 
-    <footer class="footer">
+        <div class="footer-container">
 
-        <section class="footer__contacts">
+            <h2>IT WEBSITE</h2>
 
-            <h3 class="heading-3">
-                Наши контакты
-            </h3>
+            <div class="footer-contacts">
 
-            <p class="paragraph">
-                Свяжитесь с нами удобным для вас способом.
-            </p>
+                <section class="footer-contact">
+                    <h3>Contact nums</h3>
+                    <p>+7 (778) 395 90 26</p>
+                </section>
 
-            <ul class="footer__contact-list">
+                <section class="footer-contact">
+                    <h3>Post</h3>
+                    <p>mail@mail.com</p>
+                </section>
 
-                <li>
-                    Салон красоты прямо у вашего дома
-                </li>
+                <section class="footer-contact">
+                    <h3>Address</h3>
+                    <p>City city, street st. 90</p>
+                </section>
 
-                <li>
-                    <a href="tel:+79220021440">
-                        +79220021440
-                    </a>
-                </li>
+                <section class="footer-contact">
+                    <h3>Leave a request</h3>
+                    <p>Leave a request</p>
+                </section>
 
-                <li>
-                    <a href="mailto:info@soma.ru">
-                        info@soma.ru
-                    </a>
-                </li>
+            </div>
 
-            </ul>
+            <p class="footer-note">We work throughout world</p>
 
-        </section>
-
-        <hr>
-
-        <section class="footer__copyright">
-
-            <p class="paragraph">
-                Все права защищены
-            </p>
-
-        </section>
+        </div>
 
     </footer>
 

@@ -1,6 +1,54 @@
-@import "./global.css";
-@import "./fonts.css";
-@import "./utils.css";
+@font-face {
+    font-family: "Inter";
+    src: local('Inter'), local('Inter-Bold'), local('Inter Bold'),
+         url("../../../static/fonts/Inter-Bold.ttf") format("truetype"),
+         url("../../../static/fonts/Inter-Bold.woff2") format("woff");
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: local('Inter'), local('Inter-Medium'), local('Inter Medium'),
+         url("../../../static/fonts/Inter-Medium.ttf") format("truetype"),
+         url("../../../static/fonts/Inter-Medium.woff2") format("woff");
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: local('Inter'), local('Inter-Regular'), local('Inter Regular'),
+         url("../../../static/fonts/Inter-Regular.ttf") format("truetype"),
+         url("../../../static/fonts/Inter-Regular.woff2") format("woff");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("../../../static/fonts/InterVariable-Italic.ttf") format("truetype");
+    font-weight: 100 900;
+    font-style: italic;
+}
+
+html {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+.bold {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+}
+
+.medium {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+}
 
 * {
     box-sizing: border-box;
@@ -124,7 +172,6 @@ img {
     background: #2f70df;
 }
 
-
 .hero-section {
     position: relative;
     min-height: 100vh;
@@ -227,23 +274,51 @@ img {
 .hero-image {
     position: absolute;
     z-index: 1;
-    top: 58px;
-    right: -30px;
-    width: 55%;
-    height: calc(100% - 58px);
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
+    top: 0;
+    bottom: 0;
+    left: 52%;
+    right: 0;
+    transform: rotate(-8deg);
     pointer-events: none;
 }
 
 .hero-image img {
-    width: 100%;
-    max-width: 760px;
-    height: 100%;
-    object-fit: contain;
-    object-position: right center;
+    display: none;
 }
+.hero-image::before,
+.hero-image::after {
+    content: "";
+    position: absolute;
+    top: -30%;
+    background-repeat: repeat-y;
+    background-size: 100% 50%;
+}
+.hero-image::before {
+    left: -5%;
+    width: 55%;
+    aspect-ratio: 485 / 3920;
+    background-image: url("../../../static/img/column-left.webp");
+    animation: scroll-up 40s linear infinite;
+}
+
+.hero-image::after {
+    left: 43%;
+    width: 36%;
+    aspect-ratio: 141 / 1890;
+    background-image: url("../../../static/img/column-right.webp");
+    animation: scroll-down 44s linear infinite;
+}
+
+@keyframes scroll-up {
+    to { transform: translateY(-50%); }
+}
+
+@keyframes scroll-down {
+    from { transform: translateY(-50%); }
+    to { transform: translateY(0); }
+}
+
+
 
 .development-section {
     width: min(1160px, calc(100% - 48px));
@@ -314,7 +389,6 @@ img {
     text-decoration: underline #2f70df;
 }
 
-
 .site-footer {
     margin-top: auto;
     padding: 40px 0 24px;
@@ -365,7 +439,6 @@ img {
 }
 
 @media (max-width: 768px) {
-
     .site-header {
         padding: 16px 16px 0;
     }
@@ -391,24 +464,9 @@ img {
         display: none;
     }
 
-    .header-contacts a {
-        font-size: 14px;
-    }
-
     .main-navigation {
         display: none;
         margin: 0;
-    }
-
-    .main-navigation ul {
-        flex-direction: column;
-        gap: 40px;
-    }
-
-    .main-navigation a {
-        display: inline-block;
-        font-size: 30px;
-        line-height: 1.2;
     }
 
     .hero-section {
@@ -440,22 +498,17 @@ img {
     }
 
     .hero-image {
-        top: 0;
-        bottom: 0;
-        left: 52%;
-        right: 0;
-        width: auto;
-        height: auto;
-        align-items: flex-start;
-        justify-content: flex-start;
-        overflow: hidden;
+        left: 56%;
     }
 
-    .hero-image img {
-        width: auto;
-        max-width: none;
-        object-fit: cover;
-        object-position: left top;
+    .hero-image::before {
+        left: -3%;
+        width: 72%;
+    }
+
+    .hero-image::after {
+        left: 57%;
+        width: 48%;
     }
 
     .hero-form {
@@ -495,7 +548,6 @@ img {
     .hero-form button br {
         display: none;
     }
-
     .development-section {
         width: 100%;
         grid-template-columns: 1.3fr 1fr;
@@ -599,14 +651,6 @@ img {
         padding: 0 16px;
     }
 
-    .main-navigation ul {
-        gap: 22px;
-    }
-
-    .main-navigation a {
-        font-size: 20px;
-    }
-
     .hero-section {
         flex-direction: column;
         align-items: stretch;
@@ -631,15 +675,19 @@ img {
         position: relative;
         inset: auto;
         width: calc(100% + 20px);
-        min-height: 280px;
+        height: 540px;
         margin-top: 20px;
+        overflow: hidden;
     }
 
-    .hero-image img {
-        width: 100%;
-        max-width: 100%;
-        height: auto;
-        object-fit: contain;
+    .hero-image::before {
+        left: -3%;
+        width: 62%;
+    }
+
+    .hero-image::after {
+        left: 50%;
+        width: 42%;
     }
 
     .hero-form {

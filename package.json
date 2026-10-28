@@ -1,0 +1,11 @@
+{
+  "name": "it-website",
+  "private": true,
+  "scripts": {
+    "css": "sass src/assets/styles/style.scss src/assets/styles/style.css --no-source-map --watch",
+    "watch": "sass --watch src/assets/styles/style.scss:src/assets/styles/style.css"
+  },
+  "devDependencies": {
+    "sass": "^1.80.0"
+  }
+}

@@ -14,7 +14,6 @@ $footer-bg: #111827;
 $bp-tablet: 768px;
 $bp-mobile: 425px;
 $img-path: "../../../static/img/";
-$container: 1160px;
 
 @use "fonts";
 @use "global";
@@ -30,74 +29,6 @@ $container: 1160px;
 @mixin mobile {
     @media (max-width: $bp-mobile) {
         @content;
-    }
-}
-
-@mixin container {
-    padding-inline: max(24px, calc((100% - #{$container}) / 2));
-
-    @include tablet {
-        padding-inline: 32px;
-    }
-
-    @include mobile {
-        padding-inline: 20px;
-    }
-}
-
-@mixin section-padding($d: 80px, $t: 56px, $m: 40px) {
-    padding-block: $d;
-
-    @include tablet {
-        padding-block: $t;
-    }
-
-    @include mobile {
-        padding-block: $m;
-    }
-}
-
-@mixin section-title($color: $text) {
-    margin: 0;
-    color: $color;
-    font-size: 42px;
-    line-height: 1.2;
-    letter-spacing: -1px;
-
-    @include tablet {
-        font-size: 26px;
-        letter-spacing: -0.3px;
-    }
-}
-
-@mixin field {
-    width: 100%;
-    height: 44px;
-    padding: 0 14px;
-    border: 1px solid $border;
-    border-radius: 6px;
-    background: $white;
-    color: $text;
-    font-size: 14px;
-
-    &:focus {
-        outline: 0;
-        border-color: $blue;
-    }
-}
-
-@mixin blue-button {
-    min-height: 44px;
-    padding: 0 28px;
-    border: 0;
-    border-radius: 6px;
-    background: $blue;
-    color: $white;
-    font-size: 14px;
-    font-weight: 500;
-
-    &:hover {
-        background: $blue-hover;
     }
 }
 
@@ -803,12 +734,36 @@ hr {
 $industry-order: (1: 1, 2: 2, 4: 3, 5: 4, 7: 5, 8: 6, 10: 7, 11: 8, 13: 9, 14: 10, 3: 11, 9: 12, 6: 13, 12: 14, 15: 15);
 
 .industries-section {
-    @include container;
-    @include section-padding;
+    padding-inline: max(24px, calc((100% - 1160px) / 2));
+
+    @include tablet {
+        padding-inline: 32px;
+    }
+
+    @include mobile {
+        padding-inline: 20px;
+    }
+    padding-block: 80px;
+
+    @include tablet {
+        padding-block: 56px;
+    }
+
+    @include mobile {
+        padding-block: 40px;
+    }
     background: $page-bg;
 
     h2 {
-        @include section-title;
+        margin: 0;
+        font-size: 42px;
+        line-height: 1.2;
+        letter-spacing: -1px;
+
+        @include tablet {
+            font-size: 26px;
+            letter-spacing: -0.3px;
+        }
         margin-bottom: 48px;
 
         @include tablet {
@@ -855,8 +810,24 @@ $industry-order: (1: 1, 2: 2, 4: 3, 5: 4, 7: 5, 8: 6, 10: 7, 11: 8, 13: 9, 14: 1
 }
 
 .projects-section {
-    @include container;
-    @include section-padding;
+    padding-inline: max(24px, calc((100% - 1160px) / 2));
+
+    @include tablet {
+        padding-inline: 32px;
+    }
+
+    @include mobile {
+        padding-inline: 20px;
+    }
+    padding-block: 80px;
+
+    @include tablet {
+        padding-block: 56px;
+    }
+
+    @include mobile {
+        padding-block: 40px;
+    }
     background: $page-bg;
 
     @include tablet {
@@ -875,7 +846,15 @@ $industry-order: (1: 1, 2: 2, 4: 3, 5: 4, 7: 5, 8: 6, 10: 7, 11: 8, 13: 9, 14: 1
     margin-bottom: 36px;
 
     h2 {
-        @include section-title;
+        margin: 0;
+        font-size: 42px;
+        line-height: 1.2;
+        letter-spacing: -1px;
+
+        @include tablet {
+            font-size: 26px;
+            letter-spacing: -0.3px;
+        }
         margin-bottom: 16px;
     }
 
@@ -937,7 +916,18 @@ $industry-order: (1: 1, 2: 2, 4: 3, 5: 4, 7: 5, 8: 6, 10: 7, 11: 8, 13: 9, 14: 1
     }
 
     > a {
-        @include blue-button;
+        min-height: 44px;
+        padding: 0 28px;
+        border: 0;
+        border-radius: 6px;
+        background: $blue;
+        color: $white;
+        font-size: 14px;
+        font-weight: 500;
+
+        &:hover {
+            background: $blue-hover;
+        }
         display: inline-flex;
         align-items: center;
         flex-shrink: 0;
@@ -1178,8 +1168,24 @@ $industry-order: (1: 1, 2: 2, 4: 3, 5: 4, 7: 5, 8: 6, 10: 7, 11: 8, 13: 9, 14: 1
     align-items: center;
     background: $blue;
     color: $white;
-    @include container;
-    @include section-padding(90px, 56px, 40px);
+    padding-inline: max(24px, calc((100% - 1160px) / 2));
+
+    @include tablet {
+        padding-inline: 32px;
+    }
+
+    @include mobile {
+        padding-inline: 20px;
+    }
+    padding-block: 90px;
+
+    @include tablet {
+        padding-block: 56px;
+    }
+
+    @include mobile {
+        padding-block: 40px;
+    }
 
     &::before {
         content: "THOUSAND";
@@ -1246,12 +1252,35 @@ $industry-order: (1: 1, 2: 2, 4: 3, 5: 4, 7: 5, 8: 6, 10: 7, 11: 8, 13: 9, 14: 1
     input:nth-of-type(2) { grid-area: 2 / 2; }
 
     input {
-        @include field;
+        width: 100%;
+        height: 44px;
+        padding: 0 14px;
+        border: 1px solid $border;
+        border-radius: 6px;
+        background: $white;
+        color: $text;
+        font-size: 14px;
+
+        &:focus {
+            outline: 0;
+            border-color: $blue;
+        }
         background: $page-bg;
     }
 
     button {
-        @include blue-button;
+        min-height: 44px;
+        padding: 0 28px;
+        border: 0;
+        border-radius: 6px;
+        background: $blue;
+        color: $white;
+        font-size: 14px;
+        font-weight: 500;
+
+        &:hover {
+            background: $blue-hover;
+        }
         grid-area: 3 / 1 / 4 / 3;
         justify-self: end;
         margin-top: 12px;
@@ -1275,12 +1304,36 @@ $industry-order: (1: 1, 2: 2, 4: 3, 5: 4, 7: 5, 8: 6, 10: 7, 11: 8, 13: 9, 14: 1
 
 
 .stages-section {
-    @include container;
-    @include section-padding;
+    padding-inline: max(24px, calc((100% - 1160px) / 2));
+
+    @include tablet {
+        padding-inline: 32px;
+    }
+
+    @include mobile {
+        padding-inline: 20px;
+    }
+    padding-block: 80px;
+
+    @include tablet {
+        padding-block: 56px;
+    }
+
+    @include mobile {
+        padding-block: 40px;
+    }
     background: $white;
 
     h2 {
-        @include section-title;
+        margin: 0;
+        font-size: 42px;
+        line-height: 1.2;
+        letter-spacing: -1px;
+
+        @include tablet {
+            font-size: 26px;
+            letter-spacing: -0.3px;
+        }
         margin-bottom: 48px;
 
         @include tablet {
@@ -1357,8 +1410,24 @@ $industry-order: (1: 1, 2: 2, 4: 3, 5: 4, 7: 5, 8: 6, 10: 7, 11: 8, 13: 9, 14: 1
     gap: 60px;
     align-items: center;
     background: $page-bg;
-    @include container;
-    @include section-padding;
+    padding-inline: max(24px, calc((100% - 1160px) / 2));
+
+    @include tablet {
+        padding-inline: 32px;
+    }
+
+    @include mobile {
+        padding-inline: 20px;
+    }
+    padding-block: 80px;
+
+    @include tablet {
+        padding-block: 56px;
+    }
+
+    @include mobile {
+        padding-block: 40px;
+    }
 
     @include tablet {
         grid-template-columns: minmax(0, 1fr);
@@ -1368,7 +1437,15 @@ $industry-order: (1: 1, 2: 2, 4: 3, 5: 4, 7: 5, 8: 6, 10: 7, 11: 8, 13: 9, 14: 1
 
 .team-description {
     h2 {
-        @include section-title;
+        margin: 0;
+        font-size: 42px;
+        line-height: 1.2;
+        letter-spacing: -1px;
+
+        @include tablet {
+            font-size: 26px;
+            letter-spacing: -0.3px;
+        }
         margin-bottom: 20px;
     }
 
@@ -1472,8 +1549,24 @@ $industry-order: (1: 1, 2: 2, 4: 3, 5: 4, 7: 5, 8: 6, 10: 7, 11: 8, 13: 9, 14: 1
     align-items: center;
     background: $blue;
     color: $white;
-    @include container;
-    @include section-padding(70px, 48px, 40px);
+    padding-inline: max(24px, calc((100% - 1160px) / 2));
+
+    @include tablet {
+        padding-inline: 32px;
+    }
+
+    @include mobile {
+        padding-inline: 20px;
+    }
+    padding-block: 70px;
+
+    @include tablet {
+        padding-block: 48px;
+    }
+
+    @include mobile {
+        padding-block: 40px;
+    }
 
     @include tablet {
         grid-template-columns: minmax(0, 1fr) minmax(0, 260px);
@@ -1524,20 +1617,37 @@ $industry-order: (1: 1, 2: 2, 4: 3, 5: 4, 7: 5, 8: 6, 10: 7, 11: 8, 13: 9, 14: 1
         font-size: 13px;
     }
 
-    label:nth-of-type(1) { grid-area: 1 / 1; }
-    input:nth-of-type(1) { grid-area: 2 / 1; }
-    label:nth-of-type(2) { grid-area: 1 / 2; }
-    input:nth-of-type(2) { grid-area: 2 / 2; }
-    label:nth-of-type(3) { grid-area: 3 / 1 / 4 / 3; margin-top: 8px; }
-    input:nth-of-type(3) { grid-area: 4 / 1 / 5 / 3; }
 
     input {
-        @include field;
+        width: 100%;
+        height: 44px;
+        padding: 0 14px;
+        border: 1px solid $border;
+        border-radius: 6px;
+        background: $white;
+        color: $text;
+        font-size: 14px;
+
+        &:focus {
+            outline: 0;
+            border-color: $blue;
+        }
         background: $page-bg;
     }
 
     button {
-        @include blue-button;
+        min-height: 44px;
+        padding: 0 28px;
+        border: 0;
+        border-radius: 6px;
+        background: $blue;
+        color: $white;
+        font-size: 14px;
+        font-weight: 500;
+
+        &:hover {
+            background: $blue-hover;
+        }
         grid-area: 5 / 1 / 6 / 3;
         justify-self: end;
         margin-top: 12px;
@@ -1548,12 +1658,7 @@ $industry-order: (1: 1, 2: 2, 4: 3, 5: 4, 7: 5, 8: 6, 10: 7, 11: 8, 13: 9, 14: 1
         grid-row: 2;
         grid-template-columns: minmax(0, 1fr);
 
-        label:nth-of-type(1) { grid-area: 1 / 1; }
-        input:nth-of-type(1) { grid-area: 2 / 1; }
-        label:nth-of-type(2) { grid-area: 3 / 1; margin-top: 8px; }
-        input:nth-of-type(2) { grid-area: 4 / 1; }
-        label:nth-of-type(3) { grid-area: 5 / 1; }
-        input:nth-of-type(3) { grid-area: 6 / 1; }
+
 
         button {
             grid-area: 7 / 1;
@@ -1568,7 +1673,6 @@ $industry-order: (1: 1, 2: 2, 4: 3, 5: 4, 7: 5, 8: 6, 10: 7, 11: 8, 13: 9, 14: 1
 }
 
 .book-image {
-    // book.jpg имеет белый фон, поэтому показываем вырезанную версию book.png
     width: 100%;
     max-width: 340px;
     aspect-ratio: 580 / 1027;
@@ -1594,12 +1698,36 @@ $industry-order: (1: 1, 2: 2, 4: 3, 5: 4, 7: 5, 8: 6, 10: 7, 11: 8, 13: 9, 14: 1
 }
 
 .faq-section {
-    @include container;
-    @include section-padding;
+    padding-inline: max(24px, calc((100% - 1160px) / 2));
+
+    @include tablet {
+        padding-inline: 32px;
+    }
+
+    @include mobile {
+        padding-inline: 20px;
+    }
+    padding-block: 80px;
+
+    @include tablet {
+        padding-block: 56px;
+    }
+
+    @include mobile {
+        padding-block: 40px;
+    }
     background: $white;
 
     h2 {
-        @include section-title;
+        margin: 0;
+        font-size: 42px;
+        line-height: 1.2;
+        letter-spacing: -1px;
+
+        @include tablet {
+            font-size: 26px;
+            letter-spacing: -0.3px;
+        }
         margin-bottom: 40px;
     }
 }
@@ -1679,12 +1807,5 @@ $industry-order: (1: 1, 2: 2, 4: 3, 5: 4, 7: 5, 8: 6, 10: 7, 11: 8, 13: 9, 14: 1
             color: $gray;
             transform: rotate(45deg);
         }
-    }
-
-    @include tablet {
-        &:nth-child(3) { order: 1; }
-        &:nth-child(4) { order: 2; }
-        &:nth-child(1) { order: 3; }
-        &:nth-child(2) { order: 4; }
     }
 }

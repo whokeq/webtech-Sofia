@@ -2,9 +2,11 @@
 // То есть мы не можем получить доступ к самой count. Также при вызове созданной функции необходимо выводить в консоль значение локальной переменной.
 
 function createCounter() {
-
-  return function () {
-  }
+  let count = 0; 
+  return function() {
+    count++; 
+    console.log(count);
+  };
 }
 
 const counter1 = createCounter()
